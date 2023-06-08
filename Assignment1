@@ -1,0 +1,29 @@
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    // Declare variables
+    double R, T, deltaG;
+    double lnK = -6.45;
+
+    // Ask for user inputs
+    cout << "Enter the value for R:" << endl;
+    cin >> R ;
+    cout << "Enter the value for T:" << endl;
+    cin >> T;
+
+    // Modify user input for T to Kavlin
+    T += 273.15;
+
+    // Calculate Gibbs free energy
+    deltaG = -R * T * lnK;
+
+    // Print the result
+    cout << "The Gibbs free energy is: " << fixed << setprecision(2) << deltaG << endl;
+
+    return 0;
+}
